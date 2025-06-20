@@ -1,4 +1,125 @@
 <!DOCTYPE html>
-<html lang="8">
-    
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Register Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .register-box {
+      background-color: white;
+      padding: 30px 40px;
+      border: 2px solid #007BFF;
+      border-radius: 0px 25px;
+      box-shadow: 0 0 15px rgba(0, 123, 255, 0.3);
+      width: 320px;
+    }
+
+    .register-box h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #007BFF;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 8px 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      transition: border-color 0.3s;
+    }
+
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    input[type="password"]:focus {
+      border-color: #007BFF;
+      outline: none;
+    }
+
+    button {
+      width: 100%;
+      background-color: #007BFF;
+      color: white;
+      padding: 10px 0;
+      border: none;
+      border-radius: 4px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="register-box">
+    <h2>Register Form</h2>
+    <form action="/submit-registration" method="post">
+      <label for="username">Firstname:</label>
+      <input type="text" id="firstname" name="firstname" required />
+       <label for="Last Name">Last Name:</label>
+      <input type="text" id="lastname" name="lastname" required />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required />
+
+      <label for="confirm-password">Confirm Password:</label>
+      <input type="password" id="confirm-password" name="confirm-password" required />
+      <b >Gender:</b>
+                 <select>
+                    <option>
+                        Male 
+                    </option>
+                    <option>
+                        Female
+                    </option> 
+                    <option>
+                        Others
+                    </option>
+                    </select>
+        <label for="dob" style="margin-top: 10px;"><b>Date of Birth:</b></label>
+        <input type="date" id="dob" name="dob" required><br> 
+        <label for="course"style="margin-top: 10px;"> <b>Course</b> </label>
+        <select>
+             <option>
+             Cse 
+            </option>
+            <option>
+            It
+            </option> 
+            <option>
+            Aiml
+            </option>  
+            </select>      
+
+
+      <button type="submit">Register</button>
+    </form>
+  </div>
+</body>
 </html>
